@@ -1,0 +1,10 @@
+// tsconfig.json (ya lo tienes así, no lo toques)
+{
+  "extends": "expo/tsconfig.base",
+  "compilerOptions": {
+    "strict": true,
+    "paths": {
+      "@/*": ["src/*"]
+    }
+  }
+}
