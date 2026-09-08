@@ -19,9 +19,11 @@ material de clase a mi dominio asignado.
 | Semana | Tema | Rama | Estado |
 |---|---|---|---|
 | **01** | Fundamentos RN — Core Components y Flexbox | [`week-01`](../../tree/week-01) | ✅ Entregado |
-| **02** | _(próximamente)_ | `week-02` | ⏳ Pendiente |
-| **03** | _(próximamente)_ | `week-03` | ⏳ Pendiente |
-| **04** | _(próximamente)_ | `week-04` | ⏳ Pendiente |
+| **02** | Listas, Inputs y Estilos | [`week-02`](../../tree/week-02) | ✅ Entregado |
+| **03** | React Navigation (Tabs + Stack) | [`week-03`](../../tree/week-03) | ✅ Entregado |
+| **04** | Estado Global con Zustand | [`week-04`](../../tree/week-04) | ✅ Entregado |
+| **05** | Networking con TanStack Query | [`week-05`](../../tree/week-05) | ✅ Entregado |
+| **06** | Formularios y Validación (RHF + Zod) | [`week-06`](../../tree/week-06) | ✅ Entregado |
 
 > 💡 Para ver el código de una semana específica, cambia de rama con el
 > selector de GitHub o clona y haz `git checkout week-0N`.
@@ -47,6 +49,122 @@ week-01-core_components_y_flexbox/3-proyecto/starter/
 ejecución y solución de problemas comunes.
 
 **Stack:** React Native · Expo SDK 54 · TypeScript
+
+---
+
+## 🎓 Semana 02 — Catálogo con Búsqueda (EduOnline)
+
+**Objetivo:** lista de cursos con `FlatList`, búsqueda en tiempo real con
+`TextInput` y estilos centralizados en un tema, adaptada al dominio de
+una plataforma de cursos online.
+
+**Entidad usada:** `Item` (representa `Course`) — con campos `name`,
+`instructor`, `price`, `category`, `duration`, `level`, `available`.
+
+**Ruta del proyecto en esta rama:**
+```
+week-02-listas_inputs_y_estilos/3-proyecto/starter/
+```
+
+**Cómo ejecutarlo:** ver el `README.md` dentro de esa carpeta
+(`.../starter/README.md`).
+
+**Stack:** React Native · Expo SDK 54 · TypeScript
+
+---
+
+## 🎓 Semana 03 — Navegación (Tabs + Stack anidado)
+
+**Objetivo:** navegación completa con React Navigation 7 — Tab
+Navigator con 2 pestañas (Cursos / Favoritos) y Stack Navigator anidado
+dentro de "Cursos" para ir de la lista al detalle, con parámetros
+tipados end-to-end.
+
+**Entidad usada:** `Item` (representa `Course`), con navegación
+`HomeList → HomeDetail` y una segunda pestaña `Favorites`.
+
+**Ruta del proyecto en esta rama:**
+```
+week-03-react_navigation/3-proyecto/starter/
+```
+
+**Cómo ejecutarlo:** ver el `README.md` dentro de esa carpeta — incluye
+además una guía de estudio con la explicación de cada patrón de
+navegación usado (navigators anidados, params tipados, `useRoute`,
+`useNavigation`).
+
+**Stack:** React Native · Expo SDK 54 · React Navigation 7 · TypeScript
+
+---
+
+## 🎓 Semana 04 — Estado Global con Zustand
+
+**Objetivo:** carrito de cursos con estado global compartido entre
+pestañas (`useCartStore`) — agregar/quitar un curso desde su detalle
+actualiza en tiempo real el badge de la pestaña "Carrito", sin pasar
+props ni callbacks entre pantallas.
+
+**Entidad usada:** `Item` (representa `Course`), con un store Zustand
+(`addItem`, `removeItem`, `clearAll`, `isItemInCart`) inspirado en la
+entidad `enrollments` del dominio (un carrito de inscripción).
+
+**Ruta del proyecto en esta rama:**
+```
+week-04-estado_global_zustand/3-proyecto/starter/
+```
+
+**Cómo ejecutarlo:** ver el `README.md` dentro de esa carpeta — incluye
+la guía de estudio con la explicación de selectores de Zustand y un bug
+real de reactividad que encontré y corregí probando la app.
+
+**Stack:** React Native · Expo SDK 54 · React Navigation 7 · Zustand · TypeScript
+
+---
+
+## 🎓 Semana 05 — Networking con TanStack Query
+
+**Objetivo:** consumir una API REST real (Axios + TanStack Query v5) —
+lista de cursos con estados de carga/error/vacío, pull-to-refresh,
+detalle, y formulario de creación con `useMutation`.
+
+**Entidad usada:** `Item` (representa `Course`), obtenida de
+JSONPlaceholder (`/posts` como proxy, sugerido por la especificación),
+con nombre/descripción traducidos al español e instructor derivado del
+`userId`.
+
+**Ruta del proyecto en esta rama:**
+```
+week-05-networking_tanstack_query/3-proyecto/starter/
+```
+
+**Cómo ejecutarlo:** ver el `README.md` dentro de esa carpeta — incluye
+la guía de estudio sobre los estados de `useQuery`, `queryKey` e
+`invalidateQueries`, y una nota sobre una limitación conocida de la API
+de práctica usada.
+
+**Stack:** React Native · Expo SDK 54 · Axios · TanStack Query v5 · TypeScript
+
+---
+
+## 🎓 Semana 06 — Formularios y Validación (React Hook Form + Zod)
+
+**Objetivo:** formularios de crear/editar curso con validación en
+tiempo real — React Hook Form maneja el estado del formulario, Zod
+define las reglas de validación, y un componente `FormField`
+reutilizable muestra los errores.
+
+**Entidad usada:** `Item` (representa `Course`), sobre la misma API de
+la semana 05 — se agrega `EditScreen` (edita un curso existente,
+precargado) junto a `CreateScreen`.
+
+**Ruta del proyecto en esta rama:**
+```
+week-06-formularios_validacion/3-proyecto/starter/
+```
+
+**Cómo ejecutarlo:** ver el `README.md` dentro de esa carpeta.
+
+**Stack:** React Native · Expo SDK 54 · React Hook Form · Zod · TypeScript
 
 ---
 
