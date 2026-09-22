@@ -1,0 +1,31 @@
+{
+  "expo": {
+    "name": "EduOnline",
+    "slug": "eduonline-semana07",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "dark",
+    "sdkVersion": "57.0.0",
+    "splash": {
+      "image": "./assets/splash-icon.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#0d1117"
+    },
+    "ios": {
+      "supportsTablet": false,
+      "bundleIdentifier": "com.bootcamp.eduonline.semana07"
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#0d1117"
+      },
+      "package": "com.bootcamp.eduonline.semana07"
+    },
+    "plugins": [
+      "expo-secure-store",
+      "expo-status-bar"
+    ]
+  }
+}
