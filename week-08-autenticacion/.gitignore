@@ -1,0 +1,10 @@
+node_modules/
+.expo/
+.expo-shared/
+dist/
+web-build/
+*.log
+.DS_Store
+# Carpetas nativas que genera `npx expo run:android` / `expo prebuild`
+android/
+ios/
